@@ -62,7 +62,6 @@ $result_machine_id = $helper->make();
 
 $config = new Micoya\PhpSnowflakeShm\Config();
 
-// 16bit machine id , 6bit sequence
 $config->machine_id_length = 12;
 
 // use custom config
