@@ -1,0 +1,20 @@
+{
+  "name": "micoya/php-snowflake-shm",
+  "description": "Generate unique snowflake using PHP and shared memory.",
+  "type": "library",
+  "require": {
+    "php": "5.6"
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Micoya\\PhpSnowflakeShm\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Micoya",
+      "email": "iomicoya@gmail.com"
+    }
+  ]
+}
