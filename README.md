@@ -46,6 +46,31 @@ $s = Micoya\PhpSnowflakeShm\SnowflakeFactory::makeShm(3, $config);
 echo $s->id();
 ```
 
+### Custom machine-id format helper
+
+If you want to customize the composition of your machine id, for example, if you need to distinguish between machine and worker, here is a simple tool to use.
+
+```php
+
+// 12 bit id includes
+// 4 bit machine id, current value is 15
+// 8 bit worker id, current value is 1
+$helper = new \Micoya\PhpSnowflakeShm\MachineIdHelper(12);
+$helper->pushToHigh(4, 15);
+$helper->pushToHigh(8, 1);
+$result_machine_id = $helper->make();
+
+$config = new Micoya\PhpSnowflakeShm\Config();
+
+// 16bit machine id , 6bit sequence
+$config->machine_id_length = 12;
+
+// use custom config
+$s = Micoya\PhpSnowflakeShm\SnowflakeFactory::makeShm($result_machine_id, $config);
+echo $s->id();
+
+```
+
 ## About Unit-Test
 
 Due to some environmental reasons, I didn't use PHPUnit and instead wrote a simple script, Check simple_test.php.
