@@ -1,6 +1,6 @@
 ## Description
 
-Generate unique snowflake using PHP and shared memory. Maybe it is the fastest resolver.
+Generate unique snowflake using PHP and shared memory. Maybe it is the fastest resolution.
 
 It requires shmop and sysvsem, so you can't run it on Windows OS.
 
