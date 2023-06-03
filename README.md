@@ -9,6 +9,12 @@ It requires shmop and sysvsem, so you can't run it on Windows OS.
 * 13us per op (WSL2)
 * 7us per op (Linux)
 
+## Install
+
+```shell
+composer require micoya/php-snowflake-shm
+```
+
 ## Examples
 
 ### Simple Use
